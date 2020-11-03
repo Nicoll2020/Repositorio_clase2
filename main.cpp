@@ -1,18 +1,26 @@
-/*
+/*con los numeros que habia
  */
 
 #include <iostream>
 //Variables globales y marcos
-#define TAM (int)10
+#define TAM (int)50//TAM es una macro
 
 using namespace std;
 
 int main()
 {
-   // char a[]={0};
-    char a[]="AB11CD44";
+    // char a[]={0};
+    char a[TAM]="AB11CD44EF5X5";
     for(int var=0; var<TAM;++var){
-        cout<<a[var]<<endl;
+        if(a[var]!='\0'){
+            cout<<a[var]<<endl;
+        }
+    }
+    cout<<"Imprimir solo los numeros de la cadena"<<endl;
+    for(int var=0; var<TAM;++var){
+        if (a[var]>='0' && a[var] <='9'){
+            cout<<a[var]<<endl;
+        }
     }
     return 0;
 }
